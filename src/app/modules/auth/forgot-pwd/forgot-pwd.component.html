@@ -1,0 +1,61 @@
+<div class="grid grid-cols-12 gap-6 h-screen">
+    <div class="col-span-12 lg:col-span-6 xl:col-span-6 p-2 md:ml-5 relative">
+        <!-- Login Section -->
+        <div class="w-full justify-center items-center bg-white px-2 md:px-6 lg:px-20 xl:px-24">
+            <div
+                class="flex justify-center md:justify-end mt-8 items-center media-logo-xl">
+                <img src="../../../../assets/svg/apnaRetail.svg" alt="logo" height="150px" width="150px" class="mr-[-5px]"/>
+            </div>
+            <div class="w-full mt-10 media-form-xl">
+                <div class="p-2">
+                    <h1 class="text-black-dark font-bold text-60 mb-2.5">Forgot Password</h1>
+                    <div>
+                        <p class="text-14 text-black-dim">Send the forgot password request using your email that you entered during your registration.</p>
+                    </div>
+
+                    <form autocomplete="off">
+                        <div class="mt-10">
+                            <div class="flex mb-10">
+                                <label for="email"
+                                    class="w-full text-12 text-black-dim font-semibold hover:text-primary-blue focus:text-primary-blue">Email
+                                    <span class="text-red-600">*</span>
+                                    <div class="flex autofill-border items-center border 
+                                        border-gray-dim rounded-8
+                                        focus:border focus:border-primary-blue
+                                        focus:border-primary-blue
+                                        hover:border-primary-blue mt-2 font-normal">
+                                        <input id="email" name="email" autocomplete="off"
+                                            placeholder="Enter your email address" type="email"
+                                            class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
+                                            focus:outline-none focus:ring-0 focus:border-transparent text-black-dark w-full p-2 h-[44px]" 
+                                        />
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="items-center flex justify-center">
+                                <button type="submit"
+                                    class="relative flex justify-center items-center w-full bg-primary-blue shadow-shadow-1 py-3 px-4 rounded-8 text-white font-semibold mb-2 media-btn-xl">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center md:absolute translate-css md:bottom-[2%]">
+                    <p class="font-normal text-black-dark text-14">Already have an account
+                        <a [routerLink]="['']"><span class="font-bold text-primary-blue">Login here!</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        class="col-span-12 lg:col-span-6 xl:col-span-6 bg-primary-blue hidden lg:block">
+        <!-- Image Section -->
+        <div class="hidden flex items-center justify-center ">
+        </div>
+        
+    </div>
+</div>

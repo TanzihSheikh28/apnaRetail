@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins:wght@100&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: Nunito, system-ui, sans-serif;
+    }
+}
+
+.translate-css {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 767px) and (min-width: 50px) {
+  .translate-css {
+    margin: 20px 0 !important;
+    transform: none !important;
+  }
+}
