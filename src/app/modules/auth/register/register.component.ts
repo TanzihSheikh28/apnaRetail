@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { first } from 'rxjs/operators';
 import { Location } from '@angular/common';
 import { ApiService } from '../../../core/services/api.service';
 @Component({
@@ -23,9 +22,8 @@ export class RegisterComponent {
       first_name: ['', Validators.required],
       last_name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      mobile: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(25), this.strongPasswordValidations]],
-      // company_name: ['', null],
-      // fqdn: ['', [this.forbiddenCharactersValidator]],
     });
   }
 
@@ -50,15 +48,12 @@ export class RegisterComponent {
     let data ={
       firstname: this.registerForm.get('first_name')?.value,
       lastname: this.registerForm.get('last_name')?.value,
-      // mobile: 0,
+      mobile: this.registerForm.get('mobile')?.value,
       email: this.registerForm.get('email')?.value,
       password: this.registerForm.get('password')?.value
     }
-    console.log(data);
-    
     this.apiService.post('user/register',data).subscribe(res=>{
       console.log(res);
-      
     })
   }
 }

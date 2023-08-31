@@ -25,7 +25,7 @@
                                             focus:border focus:border-primary-blue
                                             focus:border-primary-blue
                                             hover:border-primary-blue mt-2 font-normal">
-                                            <input type="text" placeholder="Enter your first name" class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
+                                            <input type="text" formControlName="first_name" placeholder="Enter your first name" class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
                                                 focus:outline-none focus:ring-0 focus:border-transparent text-black-dark w-full p-2 h-[44px]" />
                                         </div>
                                     </label>
@@ -39,28 +39,44 @@
                                         focus:border focus:border-primary-blue
                                         focus:border-primary-blue
                                         hover:border-primary-blue mt-2 font-normal">
-                                        <input type="text" placeholder="Enter your last name" class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
+                                        <input type="text" formControlName="last_name" placeholder="Enter your last name" class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
                                             focus:outline-none focus:ring-0 focus:border-transparent text-black-dark w-full p-2 h-[44px]" />
                                     </div>
                                 </label>
                                 </div>
                             </div>
-                            <div class="flex mb-8">
-                                <label for="email"
-                                    class="w-full text-12 text-black-dim font-semibold hover:text-primary-blue focus:text-primary-blue">Email
-                                    <span class="text-red-600">*</span>
+                            <div class="-mx-3 md:flex mb-8">
+                                <div class="md:w-1/2 px-3 mb-8 md:mb-0">
+                                    <label for="email"
+                                        class="w-full text-12 text-black-dim font-semibold hover:text-primary-blue focus:text-primary-blue">Email
+                                        <span class="text-red-600">*</span>
+                                        <div class="flex autofill-border items-center border 
+                                            border-gray-dim rounded-8
+                                            focus:border focus:border-primary-blue
+                                            focus:border-primary-blue
+                                            hover:border-primary-blue mt-2 font-normal">
+                                            <input id="email" name="email" autocomplete="off" formControlName="email"
+                                                placeholder="Enter your email address" type="email"
+                                                class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
+                                                focus:outline-none focus:ring-0 focus:border-transparent text-black-dark w-full p-2 h-[44px]" 
+                                            />
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="md:w-1/2 px-3">
+                                    <label class="w-full text-12 text-black-dim font-semibold hover:text-primary-blue focus:text-primary-blue"
+                                    for="last_name">
+                                    Mobile <span class="text-red-600">*</span>
                                     <div class="flex autofill-border items-center border 
                                         border-gray-dim rounded-8
                                         focus:border focus:border-primary-blue
                                         focus:border-primary-blue
                                         hover:border-primary-blue mt-2 font-normal">
-                                        <input id="email" name="email" autocomplete="off"
-                                            placeholder="Enter your email address" type="email"
-                                            class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
-                                            focus:outline-none focus:ring-0 focus:border-transparent text-black-dark w-full p-2 h-[44px]" 
-                                        />
+                                        <input type="text" formControlName="mobile" placeholder="Enter your mobile number" class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
+                                            focus:outline-none focus:ring-0 focus:border-transparent text-black-dark w-full p-2 h-[44px]" />
                                     </div>
                                 </label>
+                                </div>
                             </div>
                             <div class="flex mb-8">
                                 <label for="password"
@@ -71,7 +87,7 @@
                                         focus:border focus:border-primary-blue
                                         focus:border-primary-blue
                                         hover:border-primary-blue mt-2 font-normal">
-                                        <input id="password" name="password" autocomplete="off"
+                                        <input id="password" name="password" autocomplete="off" formControlName="password"
                                             placeholder="Enter your password"
                                             class="text-14 border-none text-field bg-transparent placeholder:text-gray-light outline-none 
                                             focus:outline-none focus:ring-0 focus:border-transparent text-black-dark w-full p-2 h-[44px]" />
