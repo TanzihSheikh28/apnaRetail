@@ -13,7 +13,7 @@
                         <p class="text-14 text-black-dim">Sign up with your active email.</p>
                     </div>
 
-                    <form autocomplete="off">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
                         <div class="mt-6">
                             <div class="-mx-3 md:flex mb-8">
                                 <div class="md:w-1/2 px-3 mb-8 md:mb-0">
